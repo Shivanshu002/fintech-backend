@@ -23,7 +23,7 @@ export class Goal {
   @Prop({ default: 0 })
   savedAmount: number;
 
-  @Prop({ required: true })
+  @Prop({ required: false, default: null })
   deadline: Date;
 
   @Prop({ enum: GoalStatus, default: GoalStatus.ACTIVE })

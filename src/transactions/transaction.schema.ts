@@ -32,10 +32,10 @@ export class Transaction {
   @Prop({ required: true, enum: TransactionType })
   type: TransactionType;
 
-  @Prop({ required: true, enum: Category })
-  category: Category;
+  @Prop({ required: true, lowercase: true, trim: true })
+  category: string;
 
-  @Prop({ required: true })
+  @Prop({ default: () => new Date() })
   date: Date;
 
   @Prop({ default: '' })
